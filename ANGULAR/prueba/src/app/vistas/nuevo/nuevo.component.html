@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container">
+    <form [formGroup]="formDatosUsuario" (ngSubmit)="postForm(formDatosUsuario.value)">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="hidden" class="form-control" placeholder="Id" formControlName="id" [readOnly]="true">
+                <label >Usuario</label> 
+                <input type="text" class="form-control" placeholder="Usuario" formControlName="usuario">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label >Primer Nombre</label> 
+                <input type="text" class="form-control" placeholder="Primer Nombre" formControlName="primerNombre">  
+            </div>
+            <div class="col-md-3">
+                <label >Segundo Nombre</label> 
+                <input type="text" class="form-control" placeholder="Segundo Nombre" formControlName="segundoNombre">  
+            </div>
+        </div>        
+        <div class="row">
+            <div class="col-md-3">
+                <label >Primer Apellido</label> 
+                <input type="text" class="form-control" placeholder="Primer Apellido" formControlName="primerApellido">  
+            </div>
+            <div class="col-md-3">
+                <label >Segundo Apellido</label> 
+                <input type="text" class="form-control" placeholder="Segundo Apellido" formControlName="segundoApellido">  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label >Departamento</label> 
+                <input type="text" class="form-control" placeholder="Departamento" formControlName="idDepartamento">  
+            </div> 
+            <div class="col-md-3">
+                <label >Cargo</label> 
+                <input type="text" class="form-control" placeholder="Cargo" formControlName="idCargo">
+            </div> 
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
+    </form>
+</div>
+<app-footer></app-footer>

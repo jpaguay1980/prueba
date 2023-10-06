@@ -66,14 +66,14 @@ namespace WebApiAdmUsuarios.Data
 
 
 
-        public static List<Users> ListarUsuario()
+        public static List<Users> ListarUsuario(int? id)
         {
             List<Users> oListaUsuario = new List<Users>();
             using (SqlConnection oConexion = new SqlConnection(Conexion.rutaConexion))
             {
                 SqlCommand cmd = new SqlCommand("sp_listar_usuario", oConexion);
                 cmd.CommandType = CommandType.StoredProcedure;
-
+                cmd.Parameters.AddWithValue("@id", id);
                 try
                 {
                     oConexion.Open();
@@ -93,7 +93,9 @@ namespace WebApiAdmUsuarios.Data
                                 PrimerApellido = dr["PrimerApellido"].ToString(),
                                 SegundoApellido = dr["SegundoApellido"].ToString(),
                                 idDepartamento = Convert.ToInt32(dr["idDepartamento"]),
-                                idCargo = Convert.ToInt32(dr["idCargo"])
+                                idCargo = Convert.ToInt32(dr["idCargo"]),
+                                Departamento = dr["Departamento"].ToString(),
+                                Cargo = dr["Cargo"].ToString()
                             });
                         }
 
@@ -111,6 +113,8 @@ namespace WebApiAdmUsuarios.Data
         }
 
 
+
+        
         public static bool Eliminar(int id)
         {
             using (SqlConnection oConexion = new SqlConnection(Conexion.rutaConexion))
@@ -141,7 +145,7 @@ namespace WebApiAdmUsuarios.Data
                 SqlCommand cmd = new SqlCommand("sp_lista_cargos", oConexion);
                 cmd.CommandType = CommandType.StoredProcedure;
                 try
-                {
+                {   
                     oConexion.Open();
                     cmd.ExecuteNonQuery();
                     using (SqlDataReader dr = cmd.ExecuteReader())
@@ -154,7 +158,7 @@ namespace WebApiAdmUsuarios.Data
                                 codigo = dr["codigo"].ToString(),
                                 nombre = dr["nombre"].ToString(),
                                 activo = bool.Parse(dr["activo"].ToString()),
-                                idUsuarioCreacion = Convert.ToInt32(dr["idDepartamento"])
+                                idUsuarioCreacion = Convert.ToInt32(dr["idUsuarioCreacion"])
                             });
                         }
 
@@ -174,7 +178,7 @@ namespace WebApiAdmUsuarios.Data
             List<Departamentos> oListaDepartamentos = new List<Departamentos>();
             using (SqlConnection oConexion = new SqlConnection(Conexion.rutaConexion))
             {
-                SqlCommand cmd = new SqlCommand("sp_lista_cargos", oConexion);
+                SqlCommand cmd = new SqlCommand("sp_lista_departamentos", oConexion);
                 cmd.CommandType = CommandType.StoredProcedure;
                 try
                 {
@@ -190,7 +194,7 @@ namespace WebApiAdmUsuarios.Data
                                 codigo = dr["codigo"].ToString(),
                                 nombre = dr["nombre"].ToString(),
                                 activo = bool.Parse(dr["activo"].ToString()),
-                                idUsuarioCreacion = Convert.ToInt32(dr["idDepartamento"])
+                                idUsuarioCreacion = Convert.ToInt32(dr["idUsuarioCreacion"])
                             });
                         }
 

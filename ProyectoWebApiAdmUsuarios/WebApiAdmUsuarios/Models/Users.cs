@@ -15,6 +15,8 @@ namespace WebApiAdmUsuarios.Models
         public string SegundoApellido { get; set; }
         public int idDepartamento { get; set; }
         public int idCargo { get; set; }
+        public string Departamento { get; set; } = "";
+        public string Cargo { get; set; } = "";
 
     }
 }

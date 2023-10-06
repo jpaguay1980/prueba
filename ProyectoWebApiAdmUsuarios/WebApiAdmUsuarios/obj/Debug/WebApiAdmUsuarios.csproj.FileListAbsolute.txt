@@ -146,7 +146,6 @@ C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\Syst
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\System.Xml.XmlSerializer.dll
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\System.Xml.XPath.dll
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\System.Xml.XPath.XDocument.dll
-C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\Microsoft.AspNetCore.Cors.dll
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\Microsoft.AspNetCore.Http.Abstractions.dll
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\Microsoft.AspNetCore.Http.Extensions.dll
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\Microsoft.AspNetCore.Http.Features.dll
@@ -168,7 +167,6 @@ C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\Syst
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\System.Text.Encodings.Web.dll
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\System.Web.Http.dll
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\System.Web.Http.WebHost.dll
-C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\Microsoft.AspNetCore.Cors.xml
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\Microsoft.AspNetCore.Http.Abstractions.xml
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\Microsoft.AspNetCore.Http.Extensions.xml
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\Microsoft.AspNetCore.Http.Features.xml
@@ -197,3 +195,6 @@ C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\obj\Debu
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\obj\Debug\WebApiAdmUsuarios.csproj.CopyComplete
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\obj\Debug\WebApiAdmUsuarios.dll
 C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\obj\Debug\WebApiAdmUsuarios.pdb
+C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\System.Web.Cors.dll
+C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\System.Web.Http.Cors.dll
+C:\Users\Jorge\source\repos\ProyectoWebApiAdmUsuarios\WebApiAdmUsuarios\bin\System.Web.Http.Cors.xml

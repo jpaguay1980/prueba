@@ -5,13 +5,16 @@ using WebApiAdmUsuarios.Models;
 
 namespace WebApiAdmUsuarios.Controllers
 {
+
     public class UserController : ApiController
     {
         // GET api/<controller>
-        public List<Users> Get()
+        public List<Users> Get(int? id)
         {
-            return ModelData.ListarUsuario();
+            return ModelData.ListarUsuario(id);
         }
+
+        
 
         // POST api/<controller>
         public bool Post([FromBody] Users oUsuario)
@@ -26,9 +29,9 @@ namespace WebApiAdmUsuarios.Controllers
         }
 
         // DELETE api/<controller>/5
-        public bool Delete(int id)
+        public bool Delete([FromBody] Users oUsuario)
         {
-            return ModelData.Eliminar(id);
+            return ModelData.Eliminar(oUsuario.Id);
         }
     }
 }
