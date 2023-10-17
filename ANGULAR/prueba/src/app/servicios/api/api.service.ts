@@ -12,44 +12,44 @@ import { ResponseI } from 'src/app/modelos/response.interface';
 })
 export class ApiService {
 
-  url : string = "http://localhost:54064/api/";
+  url : string = "http://127.0.0.1:8000/api/";
 
   constructor(private http:HttpClient) { }
 
   getListaCargos():Observable<cargosI>{
-    let direccion = this.url + "Cargos/get";
+    let direccion = this.url + "Cargos";
     return this.http.get<cargosI>(direccion);
   }
 
   getListaDepartamentos():Observable<departamentosI>{
-    let direccion = this.url + "Departamento/get";
+    let direccion = this.url + "Departamento";
     return this.http.get<departamentosI>(direccion);
   }
   
   getListaUsuarios():Observable<usuarios>{
-    let direccion = this.url + "User/get";
+    let direccion = this.url + "Users";
     return this.http.get<usuarios>(direccion);
   }
 
   getUsuario(id:number):Observable<usuarios>{
-    let direccion = this.url + "User/get?id=" + id;
+    let direccion = this.url + "UserxId/" + id;
     return this.http.get<usuarios>(direccion);
   }
 
   putUsuario(form:ListaUsuariosI):Observable<ResponseI> {
-    let direccion = this.url + "User/Put";
+    let direccion = this.url + "updUser";
     return this.http.put<ResponseI>(direccion,form);
   }
   
   postUsuario(form:ListaUsuariosI):Observable<ResponseI> {
-    let direccion = this.url + "User/Post";
+    let direccion = this.url + "addUser";
     return this.http.post<ResponseI>(direccion,form);
   }
 
   //
   deleteUsuario(form:ListaUsuariosI):Observable<ResponseI> {
-    let direccion = this.url + "User/Delete";
-    return this.http.put<ResponseI>(direccion,form);
+    let direccion = this.url + "delUser";
+    return this.http.delete<ResponseI>(direccion);
   }
 
 }
